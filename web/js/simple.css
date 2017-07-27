@@ -1,1 +1,14 @@
 .btn{width: 60px;height: 30px}
+body{
+    background: #3B0E4F url("../image/56e771d6439c1_1024.jpg") no-repeat center;
+    background-size: auto;
+}
+#bt1{
+    background-color: transparent;
+    content:"hello";
+    transition: all 10s;
+}
+#bt1:hover{
+    background-color: darkorange;
+
+}
