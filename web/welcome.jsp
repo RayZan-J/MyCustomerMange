@@ -24,23 +24,23 @@
   </script>
 </head>
 <body style="text-align: center" >
-<div style="padding: 273px 0 0 8px">
-  <form>
-    <div style="padding-top: 1px">
+<div style="padding: 262px 0 0 10px">
+  <form action="init.do" method="get">
+    <div style="padding-top: 0px">
       <input type="text" name="username" value="" id="username" title="用户名"
-             style="width:282px;height:40px;margin: 0;padding: 0;border: 0;
+             style="width:270px;height:40px;margin: 0;padding: 0;border: 0;
              background-color: transparent;cursor: text;border-radius: .5em;" onkeypress="change($(this).attr('id'))"
              onchange="changebk($(this).attr('id'))"/>
     </div>
     <div style="padding-top: 13px">
       <input type="password" name="password" value="" id="password" title="密码君"
-             style="width:282px;height:40px;margin: 0;padding: 0;border: 0;
+             style="width:270px;height:40px;margin: 0;padding: 0;border: 0;
              background-color: transparent;cursor: text;border-radius: .5em;" onkeypress="change($(this).attr('id'))"
              onchange="changebk($(this).attr('id'))"/>
     </div>
-    <div style="padding-top: 16px">
+    <div style="padding-top: 14px">
       <input type="button" name="password" value="" id="bt1" title="黄黄的按钮"
-             style="width:282px;height:40px;margin: 0;padding: 0;border: 0;
+             style="width:270px;height:40px;margin: 0;padding: 0;border: 0;
              cursor: text;border-radius: .1em;
              " onclick="submit()"
              />
