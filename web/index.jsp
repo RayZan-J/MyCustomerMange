@@ -3,6 +3,7 @@
     String cpath = request.getContextPath();
 %>
 <script src="jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<link href="js/index.css" rel="stylesheet" type="text/css">
 <head>
     <title>测试上传插件</title>
     <script>
@@ -27,7 +28,14 @@
         function upload() {
             //创建FormData对象，初始化为form表单中的数据。需要添加其他数据可使用formData.append("property", "value");
             var formData = new FormData($('form')[0]);
-
+            var values = '';
+            for(var i=0;i<$('form')[0].file.length;i++){
+                values+=$('form')[0].file.value;
+            }
+            if(values ==''){
+                alert("请选择文件！");
+                return;
+            }
             //ajax异步上传
             $.ajax({
                 url: '<%=cpath%>/upload',
@@ -64,16 +72,17 @@
 <body>
 <h2>HTML5异步上传文件，带进度条</h2>
 <form method="post" enctype="multipart/form-data">
-    其他需要提交的信息：<input type="text" name="otherInfo"/><br/><br/>
+    <%--其他需要提交的信息：<input type="text" name="otherInfo"/><br/><br/>--%>
     选择要上传的文件：<br/>
     <input type="file" name="file" class="file1" /><span></span><br/>
     <input type="file" name="file" class="file1" /><span></span><br/>
 </form>
 
 <br/><br/>
-<%--<input type="button" value="上传吧" onclick="upload()"--%>
-       <%--style="background-image: url("") "/>--%>
-<img src="image/435096.jpg" onclick="upload()" style="width: 80px;height: 50px">
+<input type="button"  onclick="upload()" class="btn"
+       style="background: url(image/jsls.jpg);width: 150px;height: 55px;background-size: 100% 100% "/>
+<%--<img src="image/jsls.jpg" onclick="upload()" style="width: 100px;height: 50px">--%>
+
 <br/><br/>
 上传进度：<progress></progress><br/>
     <p id="progress">0 bytes</p>
