@@ -1,8 +1,10 @@
 package Action;
 
+import Source.Contexts;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +25,8 @@ public class UploadFile extends HttpServlet {
     private static final String SAVE_DIR = "uploadFiles";
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
+        RequestDispatcher rd = req.getRequestDispatcher(Contexts.WEBINFO+"/uploadfile.jsp");
+        rd.forward(req,resp);
     }
 
 

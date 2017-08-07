@@ -8,6 +8,9 @@
 <head>
     <title>测试上传插件</title>
     <script>
+        function fileupload(){
+            window.location.href="<%=cpath%>/upload";
+        }
     </script>
     <style>
         body {
@@ -25,7 +28,7 @@
     <div class='s'></div>
     <div class='s'></div>
     <div class='s'></div>
-    <div class='s'></div>
+    <div class='s' onclick="fileupload();"></div>
     <div class='s'></div>
     <div class='s'></div>
     <div class='s'></div>

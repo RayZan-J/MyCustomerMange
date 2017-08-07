@@ -2,8 +2,8 @@
 <%
     String cpath = request.getContextPath();
 %>
-<script src="../../jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
-<link href="../../js/index.css" rel="stylesheet" type="text/css">
+<script src="<%=cpath%>/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<link href="<%=cpath%>/js/upload.css" rel="stylesheet" type="text/css">
 <html>
 <head>
     <title>测试上传插件</title>
@@ -82,11 +82,14 @@
 
 <br/><br/>
 <input type="button" onclick="upload()" class="btn"
-       style="background: url(../../image/jsls.jpg);width: 150px;height: 55px;background-size: 100% 100% "/>
+       style="background: url(<%=cpath%>/image/jsls.jpg);width: 150px;height: 55px;background-size: 100% 100% "/>
 <br/><br/>
 上传进度：
 <progress></progress>
 <br/>
+<div class='bar blue stripes'>
+    <span style="width: 25%"></span>
+</div>
 <p id="progress">0 bytes</p>
 <p id="info"></p>
 </body>
