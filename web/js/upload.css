@@ -1,28 +1,32 @@
+.container {
+    margin: 1rem 0;
+    max-width: 600px;
+}
 /*=====进度条外框样式======*/
 .bar {
-    background-color: #14c3a2;
+    background-color: honeydew;
     height: 40px;
-    padding: 5px;
+    padding: 2px;
     width:600px;
     margin: 50px 0 20px 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
     -moz-box-shadow: 0 1px 5px #000 inset,0 1px 0 #444;
     -webkit-box-shadow: 0 1px 5px #000 inset,0 1px 0 #444;
     box-shadow: 0 1px 5px #000 inset,0 1px 0 #444;
 
     background-size: 600px 100%;
-    border-bottom: 0.2rem solid #0d7e68;
+    /*border-bottom: 0.2rem solid #0d7e68;*/
 }
 /*=====填充条的默认风格=====*/
 .bar span {
     display: inline-block;
     height: 100%;
-    background-color: #22e8c3;
+    background-color: #cf4647;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 30px;
     -moz-box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
     box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
@@ -33,7 +37,7 @@
     transition: width 0.4s ease-in-out;
 }
 .blue span {
-    background-color: #34c2e3;
+    background-color: #14c3a2;
 }
 /*==============stripes bar=============*/
 .stripes span {
@@ -41,15 +45,19 @@
     -moz-background-size: 30px 30px;
     -ms-background-size: 30px 30px;
     -o-background-size: 30px 30px;
-    background-size: 30px 30px;
+    background-size: 600px 100%;
     background-image: -webkit-gradient(linear, left top, right bottom,color-stop(.25, #14c3a2), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #14c3a2),color-stop(.75, #14c3a2), color-stop(.75, transparent),to(transparent));
     background-image: -webkit-linear-gradient(135deg,transparent 50%, #14c3a2 50%, #14c3a2 100%,transparent 100%, transparent);
     background-image: -moz-linear-gradient(135deg, #14c3a2 25%, transparent 25%,  transparent 50%, #14c3a2 50%, #14c3a2 75%, transparent 75%, transparent);
     background-image: -ms-linear-gradient(135deg, #14c3a2 25%, transparent 25%,transparent 50%, #14c3a2 50%, #14c3a2 75%,transparent 75%, transparent);
     background-image: -o-linear-gradient(135deg, #14c3a2 25%, transparent 25%,transparent 50%, #14c3a2 50%, #14c3a2 75%,transparent 75%, transparent);
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,transparent 75%, transparent);
-    -moz-animation: animate-stripes 3s linear infinite;
-    -webkit-animation: animate-stripes 3s linear infinite;
+    background-image: repeating-linear-gradient(135deg,#14c3a2 ,#14c3a2  30px, #22e8c3  30px,#22e8c3  60px);
+    -moz-animation: animate-stripes 12s linear infinite;
+    -webkit-animation: animate-stripes 12s linear infinite;
+    animation:animate-stripes 12s linear infinite;
+}
+.bar.active:after, .bar.active:before {
+    opacity: 1;
 }
 
 @-moz-keyframes animate-stripes {
@@ -57,7 +65,7 @@
         background-position: 0 0;
     }
     100% {
-        background-position: 60px 0;
+        background-position: 600px 0;
     }
 }
 
@@ -66,7 +74,7 @@
         background-position: 0 0;
     }
     100% {
-        background-position: 60px 0;
+        background-position: 600px 0;
     }
 }
 

@@ -67,10 +67,20 @@
                 $('#progress').html(e.loaded + "/" + e.total + " bytes. " + percent.toFixed(2) + "%");
             }
         }
+        var a = setInterval(function addperce(){k
+                var wd =  $(".container .bar").find("span:eq(0)")[0].style;
+                if(parseInt(wd.width)!==100){
+                    wd.width = parseInt(wd.width)+10+"%";
+                }else{
+                    clearInterval(a);
+                }
+            },1000
+        );
+
     </script>
 </head>
 
-<body>
+<body >
 <h2>HTML5异步上传文件，带进度条</h2>
 
 <form method="post" enctype="multipart/form-data">
@@ -87,8 +97,10 @@
 上传进度：
 <progress></progress>
 <br/>
-<div class='bar blue stripes'>
-    <span style="width: 25%"></span>
+<div class='container'>
+    <div class='bar blue stripes'>
+        <span style="width: 0%"></span>
+    </div>
 </div>
 <p id="progress">0 bytes</p>
 <p id="info"></p>
