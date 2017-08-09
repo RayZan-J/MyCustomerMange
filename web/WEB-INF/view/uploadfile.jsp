@@ -4,6 +4,7 @@
 %>
 <script src="<%=cpath%>/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
 <link href="<%=cpath%>/js/upload.css" rel="stylesheet" type="text/css">
+<link href="<%=cpath%>/js/btn.css" rel="stylesheet" type="text/css">
 <html>
 <head>
     <title>测试上传插件</title>
@@ -67,15 +68,31 @@
                 $('#progress').html(e.loaded + "/" + e.total + " bytes. " + percent.toFixed(2) + "%");
             }
         }
-        var a = setInterval(function addperce(){k
+        var test;
+         function progressbar(){
+             test = setInterval(function addperce(){
+                        var wd =  $(".container .bar").find("span:eq(0)")[0].style;
+                        if(parseInt(wd.width)!==100){
+                            wd.width = parseInt(wd.width)+10+"%";
+                        }else{
+                            clearInterval(test);
+                        }
+                    },1000
+            );
+        }
+
+
+        function controlBar(){
+            if( $('#btn1').hasClass("off")){
+                $('#btn1').removeClass("off").addClass("on");
+                progressbar();
+            }else{
+                $('#btn1').removeClass("on").addClass("off");
+                clearInterval(test);
                 var wd =  $(".container .bar").find("span:eq(0)")[0].style;
-                if(parseInt(wd.width)!==100){
-                    wd.width = parseInt(wd.width)+10+"%";
-                }else{
-                    clearInterval(a);
-                }
-            },1000
-        );
+                wd.width = 0+"%";
+            }
+        }
 
     </script>
 </head>
@@ -104,5 +121,9 @@
 </div>
 <p id="progress">0 bytes</p>
 <p id="info"></p>
+<div class="btnbg">
+    <a id="btn1" href="#" onclick="controlBar()" class="button off"></a>
+</div>
+
 </body>
 </html>

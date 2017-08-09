@@ -1,0 +1,44 @@
+.button{
+    display: block;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    margin: 50px auto;
+    background-color: bisque;
+    position: relative;
+}
+.btnbg{
+    width: 100px;
+    height: 40px;
+}
+.off:after{
+    content: 'off';
+    border-radius: 30px;
+    border:1px solid #666666;
+    color: #999999;
+}
+.button:after{
+    display: block;
+    position: absolute;
+    top:2px;
+    left: 2px;
+    bottom:2px;
+    width: 36px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: bisque;
+    line-height: 36px;
+    transition: all 500ms;
+}
+.on:after{
+    border-radius: 30px;
+    right:2px;
+    border:1px solid #666666;
+    color: #999999;
+    content: 'ON';
+    transform: translate(56px, 0);
+
+}
+
