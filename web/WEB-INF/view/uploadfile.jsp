@@ -5,6 +5,7 @@
 <script src="<%=cpath%>/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
 <link href="<%=cpath%>/js/upload.css" rel="stylesheet" type="text/css">
 <link href="<%=cpath%>/js/btn.css" rel="stylesheet" type="text/css">
+<link href="<%=cpath%>/js/loader.css" rel="stylesheet" type="text/css">
 <html>
 <head>
     <title>测试上传插件</title>
@@ -69,15 +70,15 @@
             }
         }
         var test;
-         function progressbar(){
-             test = setInterval(function addperce(){
+        function progressbar(){
+            test = setInterval(function addperce(){
                         var wd =  $(".container .bar").find("span:eq(0)")[0].style;
                         if(parseInt(wd.width)!==100){
-                            wd.width = parseInt(wd.width)+10+"%";
+                            wd.width = parseInt(wd.width)+1+"%";
                         }else{
                             clearInterval(test);
                         }
-                    },1000
+                    },100
             );
         }
 
@@ -93,6 +94,30 @@
                 wd.width = 0+"%";
             }
         }
+        var loader;
+        function loaderbar(){
+            loader = setInterval(function loaderadd(){
+                        var wd =  $(".wrapper .load-bar-inner")[0].style;
+                        if(parseInt(wd.width)!==100){
+                            wd.width = parseInt(wd.width)+1+"%";
+                        }else{
+                            clearInterval(test);
+                        }
+                    },100
+            );
+        }
+        function controlLoadBar(){
+            if( $('#btn2').hasClass("off")){
+                $('#btn2').removeClass("off").addClass("on");
+                loaderbar();
+            }else{
+                $('#btn2').removeClass("on").addClass("off");
+                clearInterval(loader);
+                var wd =  $(".wrapper .load-bar-inner")[0].style;
+                wd.width = 0+"%";
+            }
+        }
+
 
     </script>
 </head>
@@ -111,19 +136,29 @@
 <input type="button" onclick="upload()" class="btn"
        style="background: url(<%=cpath%>/image/jsls.jpg);width: 150px;height: 55px;background-size: 100% 100% "/>
 <br/><br/>
+<p id="info"></p>
 上传进度：
 <progress></progress>
 <br/>
+<p id="progress">0 bytes</p>
 <div class='container'>
     <div class='bar blue stripes'>
-        <span style="width: 0%"></span>
+        <span style="width: 0"></span>
     </div>
 </div>
-<p id="progress">0 bytes</p>
-<p id="info"></p>
-<div class="btnbg">
+
+<div class="btnbg" >
     <a id="btn1" href="#" onclick="controlBar()" class="button off"></a>
 </div>
-
+<div class = "wrapper" style="float: right">
+    <div class="loadbar">
+        <div class="load-bar-inner" style="width: 0"><span id="counter"></span></div>
+    </div>
+    <h1>Loading</h1>
+    <p>Please wait...</p>
+</div>
+<div class="btnbg" style="float: left">
+    <a id="btn2" href="#" onclick="controlLoadBar()" class="button off"></a>
+</div>
 </body>
 </html>
