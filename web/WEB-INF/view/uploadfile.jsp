@@ -98,8 +98,11 @@
         function loaderbar(){
             loader = setInterval(function loaderadd(){
                         var wd =  $(".wrapper .load-bar-inner")[0].style;
+                        var c = $(".wrapper #counter")[0].style;
                         if(parseInt(wd.width)!==100){
                             wd.width = parseInt(wd.width)+1+"%";
+                            c.left = parseFloat(c.left.split('px')[0])+3.5+"px";
+                            $(".wrapper #counter").html(wd.width);
                         }else{
                             clearInterval(test);
                         }
@@ -114,7 +117,10 @@
                 $('#btn2').removeClass("on").addClass("off");
                 clearInterval(loader);
                 var wd =  $(".wrapper .load-bar-inner")[0].style;
+                var c = $(".wrapper #counter")[0].style;
                 wd.width = 0+"%";
+                c.left = "-25px";
+                $(".wrapper #counter").html("");
             }
         }
 
@@ -152,7 +158,7 @@
 </div>
 <div class = "wrapper" style="float: right">
     <div class="loadbar">
-        <div class="load-bar-inner" style="width: 0"><span id="counter"></span></div>
+        <div class="load-bar-inner" style="width: 0"><span id="counter" style="left: -25px;"></span></div>
     </div>
     <h1>Loading</h1>
     <p>Please wait...</p>

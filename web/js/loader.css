@@ -36,7 +36,7 @@ h1 p{
 }
 .wrapper .load-bar-inner{
     height: 99%;
-    width: 0;
+    width: 100%;
     border-radius: inherit;
     position: relative;
     background: #c2d7ac;
