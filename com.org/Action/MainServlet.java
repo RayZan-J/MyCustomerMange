@@ -20,6 +20,8 @@ public class MainServlet extends HttpServlet {
             new Login().doGet(request,response);
         }else if("/upload.do".equals(req)){
             new UploadFile().doGet(request,response);
+        }else if("/emp.do".equals(req)){
+            new EmpInfo().doGet(request,response);
         }else{
             throw new RuntimeException("NO Page Found!");
         }

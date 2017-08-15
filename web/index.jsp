@@ -11,6 +11,9 @@
         function fileupload(){
             window.location.href="<%=cpath%>/upload.do";
         }
+        function empinfo(){
+            window.location.href="<%=cpath%>/emp.do";
+        }empinfo
     </script>
     <style>
         body {
@@ -28,7 +31,7 @@
     <div class='s'></div>
     <div class='s'></div>
     <div class='s' onclick="fileupload();"></div>
-    <div class='s' ></div>
+    <div class='s' onclick="empinfo();"></div>
     <div class='s'></div>
     <div class='s'></div>
     <div class='s'></div>
