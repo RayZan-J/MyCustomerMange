@@ -1,4 +1,4 @@
-package Action;
+package Action.LetCode;
 
 import java.util.Arrays;
 
