@@ -4,52 +4,54 @@ import java.util.*;
 
 /**
  * Created by zll on 2017/8/29 0029.
- * Given an array of integers where 1 ¡Ü a[i] ¡Ü n (n = size of array), some elements appear twice and others appear once.
-
- Find all the elements of [1, n] inclusive that do not appear in this array.
-
- Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
-
- Example:
-
- Input:
- [4,3,2,7,8,2,3,1]
-
- Output:
- [5,6]
- ´ó¸ÅÒâË¼¾ÍÊÇÒ»¸öÊı×é±¾À´ÖµÎª1µ½Êı×é.length+1£¬ÏÖÔÚÕÒ³öÄÄĞ©È±Ê§ÁË
+ * Given an array of integers where 1 â‰¤ a[i] â‰¤ n (n = size of array), some elements appear twice and others appear once.
+ * <p>
+ * Find all the elements of [1, n] inclusive that do not appear in this array.
+ * <p>
+ * Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+ * <p>
+ * Example:
+ * <p>
+ * Input:
+ * [4,3,2,7,8,2,3,1]
+ * <p>
+ * Output:
+ * [5,6]
+ * <p></p>
+ * å¤§æ¦‚æ„æ€å°±æ˜¯ä¸€ä¸ªæ•°ç»„æœ¬æ¥å€¼ä¸º1åˆ°æ•°ç»„.length+1ï¼Œç°åœ¨æ‰¾å‡ºå“ªäº›ç¼ºå¤±äº†
  */
 public class FindDisappearedNumbers {
-    //ÎÒµÄ·½·¨
+    //æˆ‘çš„æ–¹æ³•
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         Arrays.sort(nums);
         List<Integer> list = new LinkedList<>();
         Set<Integer> set = new HashSet<>();
-        for(int i=0;i<nums.length;i++){
+        for (int i = 0; i < nums.length; i++) {
             set.add(nums[i]);
-            list.add(i+1);
+            list.add(i + 1);
         }
         list.removeAll(set);
         return list;
     }
 
     public static void main(String[] args) {
-        int[] test = {4,3,2,7,8,2,3,1};
+        int[] test = {4, 3, 2, 7, 8, 2, 3, 1};
         System.out.println(findDisappearedNumbers(test));
         System.out.println(findDisappearedNumbers1(test));
     }
-    //±ğÈËµÄ·½·¨
+
+    //åˆ«äººçš„æ–¹æ³•
     public static List<Integer> findDisappearedNumbers1(int[] nums) {
         List<Integer> list = new ArrayList<Integer>();
-        for(int i:nums){
-            int var = Math.abs(i)-1;
-            if(nums[var]>0){
+        for (int i : nums) {
+            int var = Math.abs(i) - 1;
+            if (nums[var] > 0) {
                 nums[var] = -nums[var];
             }
         }
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]>0){
-                list.add(i+1);
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                list.add(i + 1);
             }
         }
         return list;

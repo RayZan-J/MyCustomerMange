@@ -16,10 +16,10 @@ import java.util.List;
  Because nums[0] + nums[1] = 2 + 7 = 9,
  return [0, 1].
 
- 与之前的数组求和不同，这个数组没有排序，且有重复
+ 涓庝箣鍓嶇殑鏁扮粍姹傚拰涓嶅悓锛岃繖涓暟缁勬病鏈夋帓搴忥紝涓旀湁閲嶅
  */
 public class TwoSum2 {
-    //我的方法，参考了排序数组，求和的方法
+    //鎴戠殑鏂规硶锛屽弬鑰冧簡鎺掑簭鏁扮粍锛屾眰鍜岀殑鏂规硶
     public static int[] twoSum(int[] nums, int target) {
         List<Integer> list = new ArrayList<Integer>();
         for(int n:nums){

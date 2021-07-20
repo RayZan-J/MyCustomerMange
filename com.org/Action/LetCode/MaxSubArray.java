@@ -3,19 +3,24 @@ package Action.LetCode;
 /**
  * Created by zll on 2017/9/5 0005.
  * Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
-
- For example, given the array [-2,1,-3,4,-1,2,1,-5,4],
- the contiguous subarray [4,-1,2,1] has the largest sum = 6.
- ÕÒ³öÊı×éÖĞÁ¬ĞøµÄ×î´óºÍÎª¶àÉÙ
+ * <p>
+ * For example, given the array [-2,1,-3,4,-1,2,1,-5,4],
+ * the contiguous subarray [4,-1,2,1] has the largest sum = 6.
+ * æ‰¾å‡ºæ•°ç»„ä¸­è¿ç»­çš„æœ€å¤§å’Œä¸ºå¤šå°‘
  */
-//µ±n[i]+n[i+1]<n[i+1]Ê±£¬´Ón[i+1]ÖØĞÂ¿ªÊ¼ÇóºÍ¡£Ò»Ö±µ½½áÊø£¬¼ÇÂ¼³öÖĞ¼ä³öÏÖ¹ıµÄ×î´óºÍ
 public class MaxSubArray {
+    /**
+     * å½“n[i]+n[i+1]<n[i+1]æ—¶ï¼Œä»n[i+1]é‡æ–°å¼€å§‹æ±‚å’Œã€‚ä¸€ç›´åˆ°ç»“æŸï¼Œè®°å½•å‡ºä¸­é—´å‡ºç°è¿‡çš„æœ€å¤§å’Œ
+     *
+     * @param nums
+     * @return
+     */
     public int maxSubArray(int[] nums) {
         int temp = nums[0];
         int maxnum = nums[0];
-        for(int i=1;i<nums.length;i++){
-            temp = Math.max(temp+nums[i],nums[i]);
-            maxnum = Math.max(temp,maxnum);
+        for (int i = 1; i < nums.length; i++) {
+            temp = Math.max(temp + nums[i], nums[i]);
+            maxnum = Math.max(temp, maxnum);
         }
         return maxnum;
 

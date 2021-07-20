@@ -1,7 +1,5 @@
 package Action.LetCode;
 
-import com.sun.javafx.image.IntPixelGetter;
-
 import java.util.*;
 
 /**
@@ -11,22 +9,22 @@ public class MajorityElement {
     public static List<Integer> majorityElement(int[] nums) {
         List<Integer> list = new ArrayList<Integer>();
         Arrays.sort(nums);
-        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         int sum = 1;
-        for(int i=nums.length-1;i>=0;i--){
-            if(map.get(nums[i])!=null){
-                map.put(nums[i],++sum);
-            }else {
-                map.put(nums[i],sum=1);
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (map.get(nums[i]) != null) {
+                map.put(nums[i], ++sum);
+            } else {
+                map.put(nums[i], sum = 1);
             }
         }
-        if(nums.length>3){
-            for(Integer n:map.values()){
-                if(n>nums.length/3){
+        if (nums.length > 3) {
+            for (Integer n : map.values()) {
+                if (n > nums.length / 3) {
                     list.add(n);
                 }
             }
-           Set set = map.entrySet();
+            Set set = map.entrySet();
             for (Object aSet : set) {
                 Map.Entry entry = (Map.Entry) aSet;
                 if (entry.getValue() == list.get(0)) {
@@ -38,8 +36,8 @@ public class MajorityElement {
                     }
                 }
             }
-        }else {
-            for(int i:nums){
+        } else {
+            for (int i : nums) {
                 list.add(i);
             }
         }
@@ -47,7 +45,7 @@ public class MajorityElement {
     }
 
     public static void main(String[] args) {
-        int[] test = {1,2,2,3,2};
+        int[] test = {1, 2, 2, 3, 2};
         System.out.println(majorityElement(test).toString());
     }
 }

@@ -3,22 +3,25 @@ package Action.LetCode;
 /**
  * Created by zll on 2017/9/4 0004.
  * Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
-
- For example,
- Given nums = [0, 1, 3] return 2.
-
- ÕÒ³öÊı×éÖĞÈ±Ê§µÄÊı×é£¬Èç¹ûÊı×é´Ó0¿ªÊ¼Ò»Ö±ÅÅĞò£¬Ôò·µ»Øn+1£»
+ * <p>
+ * For example,
+ * Given nums = [0, 1, 3] return 2.
+ * <p>
+ * æ‰¾å‡ºæ•°ç»„ä¸­ç¼ºå¤±çš„æ•°ç»„ï¼Œå¦‚æœæ•°ç»„ä»0å¼€å§‹ä¸€ç›´æ’åºï¼Œåˆ™è¿”å›n+1ï¼›
  */
 public class MissingNumber {
     public int missingNumber(int[] nums) {
         int sum = 0;
         int n = nums.length;
-        for(int i:nums){
-            sum+=i;
+        for (int i : nums) {
+            sum += i;
         }
-        return n*(n+1)/2-sum;
+        return n * (n + 1) / 2 - sum;
     }
-    //±ğÈËµÄ·½·¨£¬ÔËÓÃÁËn^n = 0£¬ÓÉÓÚÊı×éÓĞ0--n×é³É£¬Ôò£¨0--n£©^(0--n) = 0;ÓÉÓÚÏÂ±ê´Ó0¿ªÊ¼£¬ÔòĞèÒª×îºó^Ò»¸önums.length
+
+    /**
+     * åˆ«äººçš„æ–¹æ³•ï¼Œè¿ç”¨äº†n^n = 0ï¼Œç”±äºæ•°ç»„æœ‰0--nç»„æˆï¼Œåˆ™ï¼ˆ0--nï¼‰^(0--n) = 0;ç”±äºä¸‹æ ‡ä»0å¼€å§‹ï¼Œåˆ™éœ€è¦æœ€å^ä¸€ä¸ªnums.length
+     */
     public int missingNumberOthers(int[] nums) {
         int xor = 0;
         for (int i = 0; i < nums.length; i++) {

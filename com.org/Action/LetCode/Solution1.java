@@ -5,60 +5,61 @@ import java.util.*;
 /**
  * Created by zll on 2017/8/28 0028.
  * In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix into a new one with different size but keep its original data.
-
- You're given a matrix represented by a two-dimensional array, and two positive integers r and c representing the row number and column number of the wanted reshaped matrix, respectively.
-
- The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
-
- If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
- ÆäÊµ´ó¸ÅÒâË¼¾ÍÊÇ¸øÄãÒ»¸ö¶şÎ¬Êı×é£¬»¹ÓĞÁ½¸öÊı×Ö£¬½«Êı×éÖØĞÂÅÅÁĞ³Ér*cµÄÊı×é£¬Èç¹ûÎŞ·¨ÅÅÁĞ£¬ÔòÊä³öÔ­Êı×é
-
+ * <p>
+ * You're given a matrix represented by a two-dimensional array, and two positive integers r and c representing the row number and column number of the wanted reshaped matrix, respectively.
+ * <p>
+ * The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.
+ * <p>
+ * If the 'reshape' operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
+ * å…¶å®å¤§æ¦‚æ„æ€å°±æ˜¯ç»™ä½ ä¸€ä¸ªäºŒç»´æ•°ç»„ï¼Œè¿˜æœ‰ä¸¤ä¸ªæ•°å­—ï¼Œå°†æ•°ç»„é‡æ–°æ’åˆ—æˆr*cçš„æ•°ç»„ï¼Œå¦‚æœæ— æ³•æ’åˆ—ï¼Œåˆ™è¾“å‡ºåŸæ•°ç»„
  */
 public class Solution1 {
     public static void main(String[] args) {
-        int[][] nums ={{1,2},{3,4}};
-        nums = matrixReshape(nums,1,4);
+        int[][] nums = {{1, 2}, {3, 4}};
+        nums = matrixReshape(nums, 1, 4);
         System.out.println(Arrays.deepToString(nums));
         nums = matrixReshape1(nums, 1, 4);
         System.out.println(Arrays.deepToString(nums));
     }
-    //ÎÒµÄ·½°¸£¬´Ö²ÚºÜ¶à
+
+    //æˆ‘çš„æ–¹æ¡ˆï¼Œç²—ç³™å¾ˆå¤š
     public static int[][] matrixReshape(int[][] nums, int r, int c) {
         int sum = 0;
-        List templist ;
+        List templist;
         List<Integer> num = new ArrayList<Integer>();
         for (int[] temp : nums) {
             sum += temp.length;
-            for(int n:temp){
+            for (int n : temp) {
                 num.add(n);
             }
         }
-        if(sum ==r*c ){
-            int[][] bound= new int[r][c];
-            for(int i=0;i<r;i++){
-                for(int j= 0;j<c;j++){
-                    bound[i][j] = num.get(i*c+j);
+        if (sum == r * c) {
+            int[][] bound = new int[r][c];
+            for (int i = 0; i < r; i++) {
+                for (int j = 0; j < c; j++) {
+                    bound[i][j] = num.get(i * c + j);
                 }
             }
             return bound;
-        }else{
+        } else {
             return nums;
         }
     }
-    //letcodeÉÏ¿´µ½µÄ£¬µÄÈ·±ÈÎÒµÄºÃ¶àÁË
+
+    //letcodeä¸Šçœ‹åˆ°çš„ï¼Œçš„ç¡®æ¯”æˆ‘çš„å¥½å¤šäº†
     public static int[][] matrixReshape1(int[][] nums, int r, int c) {
-        int[][]res = new int[r][c];
-        if(nums.length==0||r*c!=nums.length*nums[0].length){
+        int[][] res = new int[r][c];
+        if (nums.length == 0 || r * c != nums.length * nums[0].length) {
             return nums;
         }
-        Queue<Integer>queue = new LinkedList<>();
+        Queue<Integer> queue = new LinkedList<>();
         for (int[] num : nums) {
             for (int aNum : num) {
                 queue.add(aNum);
             }
         }
-        for(int i=0;i<r;i++){
-            for (int j=0;j<c;j++){
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
                 res[i][j] = queue.remove();
             }
         }

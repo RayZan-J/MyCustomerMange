@@ -5,32 +5,34 @@ import java.util.Arrays;
 /**
  * Created by zll on 2017/9/13 0013.
  * Given an array and a value, remove all instances of that value in place and return the new length.
-
- Do not allocate extra space for another array, you must do this in place with constant memory.
-
- The order of elements can be changed. It doesn't matter what you leave beyond the new length.
-
- Example:
- Given input array nums = [3,2,2,3], val = 3
-
- Your function should return length = 2, with the first two elements of nums being 2.
- ·µ»ØÊý×éÖÐ³ýÁË¸ø¶¨Êý×ÖÍâµÄÊý×Ö¸öÊý£¬ÇÒÄÜÕû³öÊ£ÏÂµÄÊý×é
+ * <p>
+ * Do not allocate extra space for another array, you must do this in place with constant memory.
+ * <p>
+ * The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+ * <p>
+ * Example:
+ * Given input array nums = [3,2,2,3], val = 3
+ * <p>
+ * Your function should return length = 2, with the first two elements of nums being 2
+ *
+ * è¿”å›žæ•°ç»„ä¸­é™¤äº†ç»™å®šæ•°å­—å¤–çš„æ•°å­—ä¸ªæ•°ï¼Œä¸”èƒ½æ•´å‡ºå‰©ä¸‹çš„æ•°ç»„
  */
 public class RemoveElement {
-    public static int removeElement(int[] nums,int val){
-        int i=0;
-        for(int n:nums){
-            if(n!=val){
+    public static int removeElement(int[] nums, int val) {
+        int i = 0;
+        for (int n : nums) {
+            if (n != val) {
                 nums[i] = n;
                 i++;
             }
         }
         return i;
     }
+
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4,3};
+        int[] nums = {1, 2, 3, 4, 3};
         int val = 3;
-        System.out.println(removeElement(nums,val));
+        System.out.println(removeElement(nums, val));
         System.out.println(Arrays.toString(nums));
     }
 }

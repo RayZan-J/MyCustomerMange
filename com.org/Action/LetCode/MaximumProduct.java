@@ -5,32 +5,34 @@ import java.util.Arrays;
 /**
  * Created by zll on 2017/9/4 0004.
  * Given an integer array, find three numbers whose product is maximum and output the maximum product.
-
- Example 1:
- Input: [1,2,3]
- Output: 6
- Example 2:
- Input: [1,2,3,4]
- Output: 24
-
- ¼´£ºÊä³öÒ»¸öÊı×éÖĞ3¸öÊı×ÖÏà³ËµÄ×î´óÖµ
+ * <p>
+ * Example 1:
+ * Input: [1,2,3]
+ * Output: 6
+ * Example 2:
+ * Input: [1,2,3,4]
+ * Output: 24
+ * <p>
+ * å³ï¼šè¾“å‡ºä¸€ä¸ªæ•°ç»„ä¸­3ä¸ªæ•°å­—ç›¸ä¹˜çš„æœ€å¤§å€¼
  */
 public class MaximumProduct {
     public static int maximumProduct(int[] nums) {
         Arrays.sort(nums);
-        int firstSum = nums[nums.length-2]*nums[nums.length-3];
-        int endSum = nums[0]*nums[1];
+        int firstSum = nums[nums.length - 2] * nums[nums.length - 3];
+        int endSum = nums[0] * nums[1];
 
-        return (firstSum>=endSum?firstSum:endSum)*nums[nums.length-1];
+        return (firstSum >= endSum ? firstSum : endSum) * nums[nums.length - 1];
     }
-    //±ğÈËµÄ´ğ°¸£¬¸úÎÒË¼Â·²î²»¶à£¬²»¹ı¾«¼òºÃ¶à
+
+    //åˆ«äººçš„ç­”æ¡ˆï¼Œè·Ÿæˆ‘æ€è·¯å·®ä¸å¤šï¼Œä¸è¿‡ç²¾ç®€å¥½å¤š
     public static int maximumProductOthers(int[] nums) {
         Arrays.sort(nums);
         return Math.max(nums[0] * nums[1] * nums[nums.length - 1], nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3]);
 
     }
+
     public static void main(String[] args) {
-        int[] nums = {-4,-3,-2,-1,60};
+        int[] nums = {-4, -3, -2, -1, 60};
         System.out.println(maximumProduct(nums));
         System.out.println(maximumProductOthers(nums));
     }

@@ -1,54 +1,54 @@
 package Action.LetCode;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by zll on 2017/9/14 0014.
- * ≈¡Àπø®»˝Ω«
- *    //[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1],
- *    [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1],
- *    [1, 6, 15, 20, 15, 6, 1],
- *    [1, 7, 21, 35, 35, 21, 7, 1]
- *
- *     ˝◊÷”–πÊ¬…£∫»Á [1, 7, 21, 35, 35, 21, 7, 1]£∫
- *    7=1*7/1£ª
- *    21 = 7*£®7-1£©/£®1+1£©
- *    35 = 21*£®7-2£©/£®2+1£©
- *    35 = 35*£®7-3£©/£®3+1£©
- *    21 = 35*£®7-4£©/£®4+1£©
- *    7 = 21*£®7-5£©/£®5+1£©£ª
- *    1 = 7*£®7-6£©/£®6+1£©£ª
+ * <p></p>
+ * Â∏ïÊñØÂç°‰∏âËßí
+ * <p></p>
+ * [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1],
+ * [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1],
+ * [1, 6, 15, 20, 15, 6, 1],
+ * [1, 7, 21, 35, 35, 21, 7, 1]
+ * <p>
+ * Êï∞Â≠óÊúâËßÑÂæãÔºöÂ¶Ç [1, 7, 21, 35, 35, 21, 7, 1]Ôºö
+ * 7=1*7/1Ôºõ
+ * 21 = 7*Ôºà7-1Ôºâ/Ôºà1+1Ôºâ
+ * 35 = 21*Ôºà7-2Ôºâ/Ôºà2+1Ôºâ
+ * 35 = 35*Ôºà7-3Ôºâ/Ôºà3+1Ôºâ
+ * 21 = 35*Ôºà7-4Ôºâ/Ôºà4+1Ôºâ
+ * 7 = 21*Ôºà7-5Ôºâ/Ôºà5+1ÔºâÔºõ
+ * 1 = 7*Ôºà7-6Ôºâ/Ôºà6+1ÔºâÔºõ
  */
 public class Generate {
     public static List<List<Integer>> generateAnother(int numRows) {
         List<Integer> list;
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        for(int i=0;i<numRows;i++){
+        for (int i = 0; i < numRows; i++) {
             int prev = 1;
             list = new ArrayList<Integer>();
             list.add(prev);
-            for(int j=0;j<i;j++){
-                prev = prev*(i-j)/(j+1);
+            for (int j = 0; j < i; j++) {
+                prev = prev * (i - j) / (j + 1);
                 list.add(prev);
             }
             result.add(list);
         }
         return result;
     }
+
     public static List<List<Integer>> generate(int numRows) {
         List<Integer> list;
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        for(int i=0;i<numRows;i++){
+        for (int i = 0; i < numRows; i++) {
             list = new ArrayList<Integer>();
             list.add(0, 1);
-            for(int j=1;j<i;j++){
+            for (int j = 1; j < i; j++) {
                 list.add(j, result.get(i - 1).get(j - 1) + result.get(i - 1).get(j));
             }
-            if(i!=0){
+            if (i != 0) {
                 list.add(i, 1);
             }
             result.add(list);

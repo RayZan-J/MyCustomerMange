@@ -1,47 +1,45 @@
 package Action.LetCode;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * Created by zll on 2017/8/29 0029.
  * Input: [1,1,0,1,1,1]
- Output: 3
- Explanation: The first two digits or the last three digits are consecutive 1s.
- The maximum number of consecutive 1s is 3.
- ¼òµ¥À´Ëµ¾ÍÊÇ¸ø¶¨¸øÊı×é£¬Çó³öÊı×éÖĞÁ¬ĞøµÄ1×î¶à¶àÉÙ¸ö£¬Êı×éÖĞÖ»ÓĞ0ºÍ1
+ * Output: 3
+ * Explanation: The first two digits or the last three digits are consecutive 1s.
+ * The maximum number of consecutive 1s is 3.
+ * <p></p>
+ * ç®€å•æ¥è¯´å°±æ˜¯ç»™å®šç»™æ•°ç»„ï¼Œæ±‚å‡ºæ•°ç»„ä¸­è¿ç»­çš„1æœ€å¤šå¤šå°‘ä¸ªï¼Œæ•°ç»„ä¸­åªæœ‰0å’Œ1
  */
 public class FindMaxConsecutiveOnes {
-    //ÎÒµÄ·½·¨
+    //æˆ‘çš„æ–¹æ³•
     public static int findMaxConsecutiveOnes(int[] nums) {
         StringBuilder sb = new StringBuilder();
-        for(int i:nums){
+        for (int i : nums) {
             sb.append(i);
         }
         String str = sb.toString();
         String[] temp = str.split("0");
-        int maxnum = 0 ;
-        for(String s:temp){
+        int maxnum = 0;
+        for (String s : temp) {
             int a = s.length();
-            if(maxnum<=a){
+            if (maxnum <= a) {
                 maxnum = a;
             }
         }
         return maxnum;
     }
-    //¸ßÈËµÄ·½·¨
+
+    //é«˜äººçš„æ–¹æ³•
     public static int findMaxConsecutiveOnes1(int[] nums) {
         int max = 0;
         int maxhere = 0;
-        for(int n:nums){
-            max = Math.max(max,maxhere= n==0?0:maxhere+1);
+        for (int n : nums) {
+            max = Math.max(max, maxhere = n == 0 ? 0 : maxhere + 1);
         }
         return max;
     }
 
     public static void main(String[] args) {
-        int[] a = {1,1,0,1,1,1,0,1,1,1,1,1};
+        int[] a = {1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1};
         System.out.println(findMaxConsecutiveOnes(a));
         System.out.println(findMaxConsecutiveOnes1(a));
     }

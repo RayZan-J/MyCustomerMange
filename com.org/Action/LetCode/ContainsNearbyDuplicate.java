@@ -5,16 +5,16 @@ import java.util.Set;
 
 /**
  * Created by zll on 2017/9/27 0027.
- * ÇóÊı×éÖĞ¸ø¶¨·¶Î§ÄÚÊÇ·ñ´æÔÚÏàÍ¬Êı¾İ
+ * æ±‚æ•°ç»„ä¸­ç»™å®šèŒƒå›´å†…æ˜¯å¦å­˜åœ¨ç›¸åŒæ•°æ®
  */
 public class ContainsNearbyDuplicate {
-    public static boolean containsNearbyDuplicate(int[] nums, int k){
-        //Ñ­»·ÍùsetÖĞ·ÅÖµ£¬Èç¹ûÇ°k¸öÖĞÓĞÏàÍ¬£¬Ôòset.add·µ»Øfalse£¬
-        // Èç¹û³¬¹ık£¬ÔòÒÀ´ÎÒÆ³ı×îÏÈ²åÈëµÄÖµ£¬²¢½«ĞÂÖµ²åÈë£¬²¢ÅĞ¶Ïadd·µ»ØÖµ
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        //å¾ªç¯å¾€setä¸­æ”¾å€¼ï¼Œå¦‚æœå‰kä¸ªä¸­æœ‰ç›¸åŒï¼Œåˆ™set.addè¿”å›falseï¼Œ
+        // å¦‚æœè¶…è¿‡kï¼Œåˆ™ä¾æ¬¡ç§»é™¤æœ€å…ˆæ’å…¥çš„å€¼ï¼Œå¹¶å°†æ–°å€¼æ’å…¥ï¼Œå¹¶åˆ¤æ–­addè¿”å›å€¼
         Set<Integer> set = new HashSet<>();
-        for(int i = 0; i < nums.length; i++){
-            if(i > k) set.remove(nums[i-k-1]);
-            if(!set.add(nums[i])) return true;
+        for (int i = 0; i < nums.length; i++) {
+            if (i > k) set.remove(nums[i - k - 1]);
+            if (!set.add(nums[i])) return true;
         }
         return false;
 

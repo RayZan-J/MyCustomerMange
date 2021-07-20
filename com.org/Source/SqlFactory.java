@@ -15,13 +15,15 @@ import java.util.Properties;
  */
 public class SqlFactory {
     private static SqlFactory factory = null;
-    public SqlFactory(String sql){
+
+    public SqlFactory(String sql) {
         Properties pp = new Properties();
         try {
-            String dir = System.getProperty("user.dir");  //获得tomcat所在的工作路径
+            //鑾峰緱tomcat鎵�鍦ㄧ殑宸ヤ綔璺緞
+            String dir = System.getProperty("user.dir");
             System.out.println(dir);
             InputStream in = new BufferedInputStream(new FileInputStream
-                    (dir+ File.separator+"resource"+File.separator+"database.properties"));
+                    (dir + File.separator + "resource" + File.separator + "database.properties"));
             pp.load(in);
             String url = pp.getProperty("jdbc.url");
             String driver = pp.getProperty("dirver");
@@ -29,23 +31,25 @@ public class SqlFactory {
             String password = pp.getProperty("jdbc.password");
             System.out.println(url);
             Class.forName(driver);
-            conn = DriverManager.getConnection(url,username,password);
+            conn = DriverManager.getConnection(url, username, password);
             ps = conn.prepareStatement(sql);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     private static Connection conn;
     private static PreparedStatement ps;
-    private static SqlFactory createInstance(String sql){
-        if(factory==null){
+
+    private static SqlFactory createInstance(String sql) {
+        if (factory == null) {
             return new SqlFactory(sql);
         }
         return factory;
     }
 
-    public  void close() {
+    public void close() {
         try {
             conn.close();
             ps.close();

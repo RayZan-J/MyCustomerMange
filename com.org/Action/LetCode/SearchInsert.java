@@ -1,65 +1,65 @@
 package Action.LetCode;
 
-import java.util.Arrays;
-
 /**
  * Created by zll on 2017/9/5 0005.
  * Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
-
- You may assume no duplicates in the array.
-
- Here are few examples.
- [1,3,5,6], 5 ¡ú 2
- [1,3,5,6], 2 ¡ú 1
- [1,3,5,6], 7 ¡ú 4
- [1,3,5,6], 0 ¡ú 0
- ÇóÊı×éÖĞ¸ø¶¨Êı×ÖÓ¦ÔÚµÄÎ»ÖÃ£¬ÓĞÔòÖ±½Ó·µ»Ø
+ * <p>
+ * You may assume no duplicates in the array.
+ * <p>
+ * Here are few examples.
+ * [1,3,5,6], 5 â†’ 2
+ * [1,3,5,6], 2 â†’ 1
+ * [1,3,5,6], 7 â†’ 4
+ * [1,3,5,6], 0 â†’ 0
+ * æ±‚æ•°ç»„ä¸­ç»™å®šæ•°å­—åº”åœ¨çš„ä½ç½®ï¼Œæœ‰åˆ™ç›´æ¥è¿”å›
  */
 public class SearchInsert {
     //my lower solution
     public int searchInsert(int[] nums, int target) {
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]==target){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == target) {
                 return i;
-            }else if(nums[i]<target){
-                if(i+1==nums.length){
-                    return i+1;
+            } else if (nums[i] < target) {
+                if (i + 1 == nums.length) {
+                    return i + 1;
                 }
-            }else{
+            } else {
                 return i;
             }
         }
         return 0;
     }
-    //Î±¶ş·Ö
+
+    //ä¼ªäºŒåˆ†
     public static int searchInsertOthers(int[] nums, int target) {
         int low = 0;
         int high = nums.length;
         int mid = 0;
-        while (low<high){
-            mid = (low+high)/2;
-            if(target==nums[mid]){
+        while (low < high) {
+            mid = (low + high) / 2;
+            if (target == nums[mid]) {
                 return mid;
-            }else if(target<nums[mid]){
-                high = high-1;
-            }else {
-                low=low+1;
+            } else if (target < nums[mid]) {
+                high = high - 1;
+            } else {
+                low = low + 1;
             }
         }
-        return (low+high)/2;
+        return (low + high) / 2;
     }
-    //¶ş·Ö²éÕÒ·¨£¬Èç¹ûÖĞ¼äÖµ´óÁË£¬Ôò¸ßÎ»-1£»Ğ¡ÁË£¬ÔòµÍÎ»+1£»
+
+    //äºŒåˆ†æŸ¥æ‰¾æ³•ï¼Œå¦‚æœä¸­é—´å€¼å¤§äº†ï¼Œåˆ™é«˜ä½-1ï¼›å°äº†ï¼Œåˆ™ä½ä½+1ï¼›
     public static int searchInsertAnOthers(int[] nums, int target) {
         int low = 0;
-        int high = nums.length-1;
-        while(low<=high){
-            int mid = low + (high-low)/2;
-            if(nums[mid]==target){
+        int high = nums.length - 1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (nums[mid] == target) {
                 return mid;
-            }else if(nums[mid]<target){
+            } else if (nums[mid] < target) {
                 low = mid + 1;
-            }else{
-                high = mid -1;
+            } else {
+                high = mid - 1;
             }
         }
         return low;
@@ -68,6 +68,6 @@ public class SearchInsert {
     public static void main(String[] args) {
         int[] nums = {1};
         int target = 2;
-        System.out.println(searchInsertOthers(nums,target));
+        System.out.println(searchInsertOthers(nums, target));
     }
 }

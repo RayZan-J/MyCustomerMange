@@ -2,33 +2,34 @@ package Action.LetCode;
 
 /**
  * Created by zll on 2017/9/18 0018.
- * ¼ÆËã¸ø¶¨Êı×é£¬¸ø¶¨Î»Êı£¬Á¬Ğø×î´óÖµ³ı¸ø¶¨Î»ÊıµÄÖµ
+ * è®¡ç®—ç»™å®šæ•°ç»„ï¼Œç»™å®šä½æ•°ï¼Œè¿ç»­æœ€å¤§å€¼é™¤ç»™å®šä½æ•°çš„å€¼
  */
 public class FindMaxAverage {
     public static double findMaxAverage(int[] nums, int k) {
-        int[] temp  = new int[k];
+        int[] temp = new int[k];
         int maxNum = Integer.MIN_VALUE;
-        for(int i=0;i<nums.length-k+1;i++){
-            System.arraycopy(nums,i,temp,0,k);
-            int countNum=0;
-            for(int j:temp){
-                countNum+=j;
+        for (int i = 0; i < nums.length - k + 1; i++) {
+            System.arraycopy(nums, i, temp, 0, k);
+            int countNum = 0;
+            for (int j : temp) {
+                countNum += j;
             }
-            maxNum = Math.max(maxNum,countNum);
+            maxNum = Math.max(maxNum, countNum);
         }
-        return (double)maxNum/k;
+        return (double) maxNum / k;
     }
+
     public static double findMaxAverageOthers(int[] nums, int k) {
         int sum = 0;
-        for(int i=0;i<k;i++){
-            sum+=nums[i];
+        for (int i = 0; i < k; i++) {
+            sum += nums[i];
         }
         int temp = sum;
-        //Íùºó¼ÓÒ»Î»£¬¼õÈ¥×îÇ°ÃæÒ»Î»
-        for(int i=k;i<nums.length;i++){
-            temp = temp+nums[i]-nums[i-k];
-            sum = Math.max(temp,sum);
+        //å¾€ååŠ ä¸€ä½ï¼Œå‡å»æœ€å‰é¢ä¸€ä½
+        for (int i = k; i < nums.length; i++) {
+            temp = temp + nums[i] - nums[i - k];
+            sum = Math.max(temp, sum);
         }
-        return (double)sum/k;
+        return (double) sum / k;
     }
 }

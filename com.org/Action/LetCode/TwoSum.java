@@ -12,7 +12,7 @@ import java.util.Arrays;
 
  Input: numbers={2, 7, 11, 15}, target=9
  Output: index1=1, index2=2
- ¼È¸ø¶¨Ò»¸öÓĞĞòÊı×é£¬ºÍÒ»¸öÖµ£¬ÇóÊı×éÖĞµÚ¼¸¸öÓëµÚ¼¸¸öÖµÏà¼ÓµÈÓÚ¸ÃÖµ
+ æ—¢ç»™å®šä¸€ä¸ªæœ‰åºæ•°ç»„ï¼Œå’Œä¸€ä¸ªå€¼ï¼Œæ±‚æ•°ç»„ä¸­ç¬¬å‡ ä¸ªä¸ç¬¬å‡ ä¸ªå€¼ç›¸åŠ ç­‰äºè¯¥å€¼
  */
 public class TwoSum{
     public static int[] twoSum(int[] numbers, int target) {
