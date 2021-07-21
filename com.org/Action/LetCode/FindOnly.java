@@ -35,5 +35,8 @@ public class FindOnly {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 1, 2, 5, 3, 4};
         System.out.println(singleNumber(nums));
+
+        int[] nums1 = {1, 2, 3, 4, 1, 2, 5, 3, 4, 6, 6};
+        System.out.println(singleNumber(nums1));
     }
 }
