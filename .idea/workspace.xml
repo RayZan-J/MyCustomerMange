@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dee1b7dc-e40c-46d9-891f-737229cfba72" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CustomerMange_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/CustomerMange_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="dee1b7dc-e40c-46d9-891f-737229cfba72" name="Default" comment="代码编码格式调整">
+      <change afterPath="$PROJECT_DIR$/com.org/Action/base/CpuCompute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerMange.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerMange.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindDisappearedNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/FindDisappearedNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindLengthOfLCIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/FindLengthOfLCIS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindMaxAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/FindMaxAverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindMaxConsecutiveOnes.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/FindMaxConsecutiveOnes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/Generate.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/Generate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MajorityElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/MajorityElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MaxProfit.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/MaxProfit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MaxSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/MaxSubArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MaximumProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/MaximumProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/Merge.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/Merge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MissingNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/MissingNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MoveZeroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/MoveZeroes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/PascalTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/PascalTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/RemoveDuplicates.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/RemoveDuplicates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/RemoveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/RemoveElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/SearchInsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/SearchInsert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/Solution1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/TwoSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/TwoSum2.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/LetCode/TwoSum2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/ContainsDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/ContainsDuplicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/ContainsNearbyDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/ContainsNearbyDuplicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindDisappearedNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/FindDisappearedNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindLengthOfLCIS.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/FindLengthOfLCIS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindMaxAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/FindMaxAverage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindMaxConsecutiveOnes.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/FindMaxConsecutiveOnes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/FindOnly.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/FindOnly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/Generate.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/Generate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MajorityElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/MajorityElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MaxProfit.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/MaxProfit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MaxSubArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/MaxSubArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MaximumProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/MaximumProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/Merge.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/Merge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MissingNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/MissingNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/MoveZeroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/MoveZeroes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/PascalTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/PascalTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/RemoveDuplicates.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/RemoveDuplicates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/RemoveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/RemoveElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/SearchInsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/SearchInsert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/Solution1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/LetCode/TwoSum2.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/letcode/TwoSum2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Action/UploadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/Action/UploadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Source/Contexts.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/source/Contexts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com.org/Source/SqlFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/com.org/source/SqlFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +49,7 @@
       <list>
         <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -141,9 +148,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.CpuCompute">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -246,6 +253,34 @@
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
+    </configuration>
+    <configuration name="CpuCompute" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Action.base.CpuCompute" />
+      <module name="CustomerMange" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Action.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindOnly" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Action.letcode.FindOnly" />
+      <module name="CustomerMange" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Action.letcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -401,6 +436,17 @@
       <pass-parent-envs>true</pass-parent-envs>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.FindOnly" />
+      <item itemvalue="Tomcat Server.tomcat8" />
+      <item itemvalue="Application.CpuCompute" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CpuCompute" />
+        <item itemvalue="Application.FindOnly" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -415,8 +461,33 @@
       <updated>1501081790371</updated>
       <workItem from="1501081794060" duration="3804000" />
       <workItem from="1501088516036" duration="506000" />
-      <workItem from="1626766284581" duration="982000" />
+      <workItem from="1626766284581" duration="6071000" />
+      <workItem from="1627265785946" duration="1234000" />
+      <workItem from="1627295276789" duration="598000" />
+      <workItem from="1628481456583" duration="2131000" />
     </task>
+    <task id="LOCAL-00001" summary="代码编码格式调整">
+      <created>1626767443288</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626767443288</updated>
+    </task>
+    <task id="LOCAL-00002" summary="数组中只有1个数不重复,找到这个数">
+      <created>1626864088330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626864088330</updated>
+    </task>
+    <task id="LOCAL-00003" summary="测试git上传">
+      <created>1626864619825</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626864619825</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -456,6 +527,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="D:/gitfactory" />
+    </ignored-roots>
+    <MESSAGE value="代码编码格式调整" />
+    <MESSAGE value="数组中只有1个数不重复,找到这个数" />
+    <MESSAGE value="测试git上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试git上传" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

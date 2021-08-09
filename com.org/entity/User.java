@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 /**
  * Created by zll on 2017/7/27 0027.
